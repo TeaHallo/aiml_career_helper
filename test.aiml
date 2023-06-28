@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>set</pattern>
+	    <template><think><set name="program">0</set></think><get name="program"/>
+	    <think><set name="cyber">0</set></think><get name="cyber"/>
+	    <think><set name="web">0</set></think><get name="web"/>
+	    <think><set name="network">0</set></think><get name="network"/>
+	    <think><set name="hardware">0</set></think><get name="hardware"/>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>increase1</pattern>
+        <template><think><set name="program"><map><name>successor</name><get name="program"/></map></set></think></template>
+    </category>
+    
+    <category>
+        <pattern>increase2</pattern>
+        <template><think><set name="cyber"><map><name>successor</name><get name="cyber"/></map></set></think></template>
+    </category>
+    
+    <category>
+        <pattern>increase3</pattern>
+        <template><think><set name="web"><map><name>successor</name><get name="web"/></map></set></think></template>
+    </category>
+    
+    <category>
+        <pattern>increase4</pattern>
+        <template><think><set name="network"><map><name>successor</name><get name="network"/></map></set></think></template>
+    </category>
+    
+    <category>
+        <pattern>increase5</pattern>
+        <template><think><set name="hardware"><map><name>successor</name><get name="hardware"/></map></set></think></template>
+    </category>
+    
+    <category>
+        <pattern>how high program</pattern>
+        <template><get name="program"/></template>
+    </category>
+    
+     <category>
+        <pattern>how high cyber</pattern>
+        <template><get name="cyber"/></template>
+    </category>
+    
+     <category>
+        <pattern>how high web</pattern>
+        <template><get name="web"/></template>
+    </category>
+    
+     <category>
+        <pattern>how high network</pattern>
+        <template><get name="network"/></template>
+    </category>
+    
+     <category>
+        <pattern>how high hardware</pattern>
+        <template><get name="hardware"/></template>
+    </category>
+    
+    <category>
+        <pattern>MAX</pattern>
+        <template>
+          <think><set name="max"><srai>XXMAX <get name="program"/> <get name="cyber"/> XS <get name="web"/></srai></set></think>
+          
+          <think><set name= "max"><srai>XXMAX <get name="max"/> <get name="network"/> XS <get name="hardware"/></srai></set></think>
+          
+         <condition name="max">
+            <li><value><get name="program"/></value>You should be a Computer Programmer!</li>
+            <li><value><get name="cyber"/></value>You should be a Cyber Security Analyst!</li>
+            <li><value><get name="web"/></value>You should be a Web Developer!</li>
+            <li><value><get name="network"/></value>You should be a Network Administrator!</li>
+            <li><value><get name="hardware"/></value>You should be a Computer Hardware Engineer!</li>
+        </condition>
+        </template>
+    </category>
+</aiml>

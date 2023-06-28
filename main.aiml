@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>START</pattern>
+	    <template>Would you like assistance with choosing a career path?</template>
+    </category>
+    
+    <category>
+        <that>Would you like assistance with choosing a career path</that>
+        <pattern>YES</pattern>
+        <template>
+        Great! I will ask you 25 questions.<split/><delay>2</delay>
+        After clicking on your final answer, click the Next button.<split/>
+      <think><srai>set</srai></think>
+      <delay>5</delay>
+      <srai>Ready</srai>
+        </template>
+    </category>
+    
+    <category>
+        <that>Would you like assistance with choosing a career path</that>
+        <pattern>NO</pattern>
+        <template>
+        I'm sorry, I can't help you then.
+        </template>
+    </category>
+    
+    <category>
+        <that>Would you like assistance with choosing a career path</that>
+        <pattern>*</pattern>
+        <template>Please answer Yes or No.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Ready</pattern>
+        <template> Do you like writing in Java or C++?
+            <button>
+                <text>YES</text>
+                <postback>increase1</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+                </button>
+                <button>
+                    <text>NEXT</text>
+                    <postback>2</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>2</pattern>
+        <template> Do you like creating algorithms to solve problems?
+            <button>
+                <text>YES</text>
+                <postback>increase1</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>3</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>3</pattern>
+        <template> Do you like finding and fixing bugs?
+            <button>
+                <text>YES</text>
+                <postback>increase1</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>4</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>4</pattern>
+        <template> Do you like figuring out how to make programs more efficient?
+            <button>
+                <text>YES</text>
+                <postback>increase1</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>5</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>5</pattern>
+        <template> Do you feel a sense of satisfaction when you run your finished
+        program and it works properly?
+            <button>
+                <text>YES</text>
+                <postback>increase1</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>6</postback>
+                </button>
+        </template>
+    </category>
+   
+    
+      <category>
+        <pattern>6</pattern>
+        <template> Are you good at encryption formulas?
+            <button>
+                <text>YES</text>
+                <postback>increase2</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>7</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>7</pattern>
+        <template> Does hacking peak your interest?
+            <button>
+                <text>YES</text>
+                <postback>increase2</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>8</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>8</pattern>
+        <template> Do you like firewalls and are interested in building one?
+            <button>
+                <text>YES</text>
+                <postback>increase2</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>9</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>9</pattern>
+        <template> Are you interested in finding and fixing holes in software to prevent attacks?
+            <button>
+                <text>YES</text>
+                <postback>increase2</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>10</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>10</pattern>
+        <template> Are you interested in helping companies protect their sensitive data?
+            <button>
+                <text>YES</text>
+                <postback>increase2</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>11</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>11</pattern>
+        <template> Do you like to write in HTML or CSS?
+            <button>
+                <text>YES</text>
+                <postback>increase3</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>12</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>12</pattern>
+        <template> Do you enjoy designing programs to appeal to users visually?
+            <button>
+                <text>YES</text>
+                <postback>increase3</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>13</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>13</pattern>
+        <template> Are you good at JavaScript?
+            <button>
+                <text>YES</text>
+                <postback>increase3</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>14</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>14</pattern>
+        <template> Are you comfortable with querying databases?
+            <button>
+                <text>YES</text>
+                <postback>increase3</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>15</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>15</pattern>
+        <template> Do you thoroughly enjoy working on the Internet and with different browsers?
+            <button>
+                <text>YES</text>
+                <postback>increase3</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>16</postback>
+                </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>16</pattern>
+        <template> Does optimizing a network for faster processing excite you?
+            <button>
+                <text>YES</text>
+                <postback>increase4</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>17</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>17</pattern>
+        <template> Do you like to help people solve their computer connection issues?
+            <button>
+                <text>YES</text>
+                <postback>increase4</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>18</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>18</pattern>
+        <template> Are you interested in router and cable configurations?
+            <button>
+                <text>YES</text>
+                <postback>increase4</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>19</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>19</pattern>
+        <template> Do you like to share your knowledge about installation of
+                   software and computer components?
+            <button>
+                <text>YES</text>
+                <postback>increase4</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>20</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>20</pattern>
+        <template> Are you interested in how wired and wireless networks work?
+            <button>
+                <text>YES</text>
+                <postback>increase4</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>21</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>21</pattern>
+        <template> Do you like to take computers apart and investigate
+                   how everything fits together?
+            <button>
+                <text>YES</text>
+                <postback>increase5</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>22</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>22</pattern>
+        <template> Would you rather fix a motherboard than fix a "for loop"?
+            <button>
+                <text>YES</text>
+                <postback>increase5</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>23</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>23</pattern>
+        <template> Do you like circuits?
+            <button>
+                <text>YES</text>
+                <postback>increase5</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>24</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>24</pattern>
+        <template> Do you enjoy the physical work of building?
+            <button>
+                <text>YES</text>
+                <postback>increase5</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>NEXT</text>
+                    <postback>25</postback>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>25</pattern>
+        <template> Would you enjoy designing the way a computer looks?
+            <button>
+                <text>YES</text>
+                <postback>increase5</postback>
+            </button>
+            <button>
+                <text>NO</text>
+                <postback>NO</postback>
+            </button>
+            <button>
+                    <text>DONE</text>
+                    <postback>MAX</postback>
+                </button>
+        </template>
+    </category>
+    
+   
+    
+</aiml>
